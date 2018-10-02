@@ -1,0 +1,4 @@
+2nd september 2018
+
+	It has come to my notice that even though LRP works with non-linear activations or mappings, it assumes that the input of a neuron in layer l to the activation function represents the factor in which relevance is propagated from the layer l+1 to the neuron. That is h_ij(x_i) is considered as z_ij, this implies that once I reach the activation or pooling, relevances factors are propagated to the previous layers, such that it is conserved across layers, without considering that the activation might be non linear. 
+	In simple words, LRP skips any kind of complicated or even simple activation and just focuses on neuron values.
