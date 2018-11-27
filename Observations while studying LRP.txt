@@ -1,13 +1,3 @@
-2nd september 2018
-
-	It has come to my notice that even though LRP works with non-linear activations or mappings, it assumes that the input of a neuron in layer l to the activation function represents the factor in which relevance is propagated from the layer l+1 to the neuron. That is h_ij(x_i) is considered as z_ij, this implies that once I reach the activation or pooling, relevances factors are propagated to the previous layers, such that it is conserved across layers, without considering that the activation might be non linear. 
-	In simple words, LRP skips any kind of complicated or even simple activation and just focuses on neuron values.
-
-3rd september 2018
-	
-	Regarding the previous analysis, and all the mental analysisi I have done, LRP is consistent. And while taking a closer look activations and pooling are certainly considered, just not directly but while considering activations of layer l+1 and propagating towards layer l.
-
-
 
 Comparación propagar softmax / logits (ver la consistencia entre la propagación, respuesta propagación inversa (-1))
 Ver que logits se pasan
@@ -15,3 +5,14 @@ Crear base de datos, mlp, simple:
 	1-. una dimesión fija, siempre un valor max (propagar un logit)
 	2-. valor max del vector define la clase (propagar un logit)
 	3-. probar con distintas activaciones (relu, softmax, tanh), propagar logits * -1
+
+
+
+
+Changes to make (or study) after doing LRP test:
+
+1-. Propagate -logit in the case the maximum logit is <0
+
+TODO list
+
+Check correlation of failure with relevance in or close to borders
